@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.github.lhoyong.hiltsample.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.github.lhoyong.hiltsample.ui.second.SecondFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_second" />
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.github.lhoyong.hiltsample.ui.third.ThirdFragment"
+        android:label="Third"
+        tools:layout="@layout/fragment_third" />
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.github.lhoyong.hiltsample.ui.detail.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="text"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <!-- Global Actions -->
+    <action
+        android:id="@+id/action_to_detail"
+        app:destination="@id/detailFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+</navigation>
